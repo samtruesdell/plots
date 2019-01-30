@@ -14,7 +14,7 @@ You have some landings data for the midwater trawl Atlantic Herring fishery from
 
 Your task is to create a barplot in R that shows the estimated landings as the main bars and also includes the standard deviation for each month as an error bar on top. We want to make something that looks like this:
 
-![Final Figure](/images/finalProduct.jpeg)
+![Final Figure](./images/finalProduct.jpeg)
 
 The first thing that pops to mind may be to use R's barplot() function. We could certainly do that but it would be too easy! Instead let's try to create a barplot using some of the concepts we just learned.
 
