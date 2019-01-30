@@ -48,7 +48,7 @@ plot(x = NA,       # NA means that nothing will be plotted
 ```
 This gives us an empty plot:
 
-![emptyPlot](/images/emptyPlot.jpeg)
+![emptyPlot](images/emptyPlot.jpeg)
 
 Next let's add the first error bar using the ```rect()``` function we learned about earlier. We can specify whatever width we want -- let's go with 0.4. Since the first bar will be centered around 1.0 we will make the x range extend from 0.8 to 1.2.
 ```
@@ -60,7 +60,7 @@ rect(xleft = 0.8,        # minimum in the x direction
                          # value for catch in May
 ```
 
-![oneBar](/images/oneBar.jpeg)
+![oneBar](images/oneBar.jpeg)
 
 Now add the other two error bars to the figure. For each of the next two calls to ```rect()``` you will have to change:
 1. the **xleft** and **xright** values so that they are centered on 2.0 and 3.0; and
@@ -68,7 +68,7 @@ Now add the other two error bars to the figure. For each of the next two calls t
 
 Once you add the other two rectangles you will have a figure that looks like this
 
-![oneBar](/images/threeBars.jpeg)
+![oneBar](images/threeBars.jpeg)
 
 Way to go you have completed the first part of the exercise! Now let's try and refine this basic plot to make it look a little nicer...
 
@@ -91,7 +91,7 @@ rect(xleft = c(0.8, 1.8, 2.8)
 ```
 Successful completion of Part 2 yields a plot that looks like
 
-![part2Complete](/images/part2Complete.jpeg)
+![part2Complete](images/part2Complete.jpeg)
 
 ## Part 3: Adding the error bars
 
@@ -108,7 +108,7 @@ arrows(x0 = c(1, 2, 3),          # starting x location for each arrow
 ```
 Successful completion of Part 2 yields a plot that looks like
 
-![part3Complete](/images/part3Complete.jpeg)
+![part3Complete](images/part3Complete.jpeg)
 
 ## Part 4: Clean up
 
@@ -129,7 +129,7 @@ This will add an additional 4% on to the maximum value in the plot. Now we are r
 
 If you run ```plot()``` with these arguments in place you should now have something that looks like
 
-![part4Initial](/images/part4Initial.jpeg)
+![part4Initial](images/part4Initial.jpeg)
 
 Note that the y axis now starts exactly at zero.
 
@@ -139,11 +139,11 @@ axis(side = 1,         # which side do you want the axis on (1 for bottom)
      at = c(1, 2, 3),  # where do you want the ticks and labels to be
      labels = c('May', 'Jun', 'Jul'))  # text for the labels
 ```
-![part4Axis](/images/part4Axis.jpeg)
+![part4Axis](images/part4Axis.jpeg)
 
 Now we are ready to add the rectangles (```rect()```) and error bars (```arrows()```). The only difference from our previous code is that we want to add an additional argument to the ```arrows()``` function -- **length** -- which controls the length of the arrow head. In your code set **length = 0.1**.
 
-![part4BarsArrows](/images/part4BarsArrows.jpeg)
+![part4BarsArrows](images/part4BarsArrows.jpeg)
 
 Our final task is to specify axis labels. For this we will use the function ```mtext()```. We need to make labels for the x (Month) and y (Landings) axes.  Add a label for each axis using either one or two calls to ```mtext()``` and using the code prompts below. If you need more information you can look at the help file by typing ```?mtext``` into the R console.
 ```
@@ -155,6 +155,6 @@ mtext(text = ??,     # What should the label be
 
 After completing all these steps your final plot should look like this:
 
-![part4Final](/images/part4Final.jpeg)
+![part4Final](images/part4Final.jpeg)
 
 Way to go you are done! Feel free to contact me if you have any questions.
