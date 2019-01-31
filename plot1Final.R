@@ -34,6 +34,7 @@ tempSd <- apply(temp, 2, sd)
 # be the maximum of the means plus the sds and the minimum extreme will be
 # the means minus the sds.
 yl <- range(tempMean - tempSd, tempMean + tempSd)
+xl <- c(0, 5)
 
 # Set the desired margins
 par(mar=c(4.5,4.5,3,2))
@@ -43,7 +44,7 @@ plot(x = NA,          # NA will make an empty plot. In the previous example
                       # we included data so that R would determine our x and y
                       # limits for us. In this case we will say the data are
                       # NA and we will provide limits ourselves.
-     xlim = c(0, 5),  # We have 4 data sets that we will plot at locations 1-4
+     xlim = xl,       # We have 4 data sets that we will plot at locations 1-4
      ylim = yl,       # y axis limits are specified above
      las = 1,         # ensure all labels are in the reading direction
      xlab = 'Temperature series',         # Label the x axis

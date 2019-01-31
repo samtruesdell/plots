@@ -10,19 +10,28 @@ hdat <- read.csv('Class_2.csv', header=TRUE)
 
 #### First plot: 2-axis plot with data on different scales ####
 
+# Establish the y and x plotting limits
+yl <- range(hdat$SSB)
+xl <- range(hdat$Year)
+
 # Set the plotting margins
 par(mar = c(5,6,2,4))
 
 # Plot the SSB time series
-plot(SSB ~ Year,     # Y ~ X (same as plot(X,y) )
-     data = hdat,    # Identify the data frame for SSB and Year
+plot(NA,             # Y ~ X (same as plot(X,y) )
+     xlim = xl,      # x limits established earlier
+     ylim = yl,      # y limits established earlier
      las = 1,        # ensure all labels are horizontal
      xlab = '',      # supress x axis label
-     ylab = '',      # supress y axis label
-     type = 'n')     # supress the actual plotting. We want this because
-#   we will plot be plotting rectangles and we want
-#   any points from the time series to end up on top
-#   of the rectangles.
+     ylab = '')      # supress y axis label
+     
+# alternative to plot(NA and arguments xlim and ylim: include 
+# plot(SSB ~ YEAR and use argument type = 'n'.
+# This would also supress drawing the plot. The x and y limits would be
+# correct because R would get them from SSB and YEAR. 
+# We want to supress drawing because we will be plotting rectangles 
+# and we want any points from the time series to end up on top
+# of the rectangles (the order matters).
 
 # Plot rectangles indicating important periods of herring management.
 # Amendment 1 specified explicit use of biological reference points so
@@ -67,7 +76,8 @@ plot(NOAA_Mean_SST ~ Year,
      axes = FALSE)   # This plot should not be annotated -- otherwise R will
 # draw new axes on top of the old axes. Below we will
 # draw a new Y axis (the X axis will remain the same)
-# Draw a new Y axis - this on for temperature - on the right side of the graph
+
+# Draw a new Y axis - this one for temperature - on the right side of the graph
 axis(side = 4,  # side=4 tells R to draw the axis on the right side of the plot
      las = 1)   # las=1 indicates that all labels should be read horizontally
 
