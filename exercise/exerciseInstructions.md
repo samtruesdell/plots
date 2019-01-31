@@ -157,4 +157,15 @@ After completing all these steps your final plot should look like this:
 
 ![part4Final](images/part4Final.jpeg)
 
+Have more time? Try exporting figures (e.g., the two we discussed earlier or this one from the exercise) using the ```jpeg()``` function. This is useful for standardizing output since you can set the dimensions of the figure. You can also adjust the resolution which may be necessary for journal submissions.  Note that when you use ```jpeg()``` you must also close the device using ```dev.off()``` e.g., 
+```
+jpeg(filename, width, height, ...)
+
+  # all plotting functions go here including plot(), axis(),
+  # mtext(), etc.
+
+dev.off()
+```
+For help see ```?jpeg```.
+
 Way to go you are done! Feel free to contact me if you have any questions.
