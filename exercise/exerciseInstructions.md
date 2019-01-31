@@ -64,7 +64,7 @@ rect(xleft = 0.8,        # minimum in the x direction
 
 Now add the other two error bars to the figure. For each of the next two calls to ```rect()``` you will have to change:
 1. the **xleft** and **xright** values so that they are centered on 2.0 and 3.0; and
-2. **ytop** so that it reflects the correct index (i.e., the **[ ]**) of ```catchEst``` (it will be 2 and then 3)
+2. **ytop** so that it reflects the correct index (i.e., the **[ ]**) of ```catchEst```.
 
 Once you add the other two rectangles you will have a figure that looks like this
 
@@ -106,7 +106,7 @@ arrows(x0 = c(1, 2, 3),          # starting x location for each arrow
        code = 2,                 # code=2 specifies arrow head on end
        angle = 90)               # arrow head angle: 90 for flat
 ```
-Successful completion of Part 2 yields a plot that looks like
+Successful completion of Part 3 yields a plot that looks like
 
 ![part3Complete](images/part3Complete.jpeg)
 
@@ -133,15 +133,15 @@ If you run ```plot()``` with these arguments in place you should now have someth
 
 Note that the y axis now starts exactly at zero.
 
-Next we want to create an x axis for the plot that is nicely labeled. We will specify **side = 1** to indicate that we want the axis to be at the bottom of the plot. In addition we will give locations and labels for each of the tick marks.
+Next we want to create an x axis for the plot that is nicely labeled. We will specify **side = 1** to indicate that we want the axis to be at the bottom of the plot. In addition we will give locations (the **at** parameter -- this one needs to be filled in) and labels for each of the tick marks.
 ```
 axis(side = 1,         # which side do you want the axis on (1 for bottom)
-     at = c(1, 2, 3),  # where do you want the ticks and labels to be
+     at = ??,  # where do you want the ticks and labels to be
      labels = c('May', 'Jun', 'Jul'))  # text for the labels
 ```
 ![part4Axis](images/part4Axis.jpeg)
 
-Now we are ready to add the rectangles (```rect()```) and error bars (```arrows()```). The only difference from our previous code is that we want to add an additional argument to the ```arrows()``` function -- **length** -- which controls the length of the arrow head. In your code set **length = 0.1**.
+Now we are ready to add the rectangles (```rect()```) and error bars (```arrows()```). The only difference from our previous code is that we want to add an additional argument to the ```arrows()``` function -- **length** -- which controls the length of the arrow head. Experiment with different values for **length** until you end up with one you like!
 
 ![part4BarsArrows](images/part4BarsArrows.jpeg)
 
@@ -157,7 +157,7 @@ After completing all these steps your final plot should look like this:
 
 ![part4Final](images/part4Final.jpeg)
 
-Have more time? Try exporting figures (e.g., the two we discussed earlier or this one from the exercise) using the ```jpeg()``` function. This is useful for standardizing output since you can set the dimensions of the figure. You can also adjust the resolution which may be necessary for journal submissions.  Note that when you use ```jpeg()``` you must also close the device using ```dev.off()``` e.g., 
+Have more time? Try exporting figures (e.g., the two we discussed earlier or this one from the exercise) using the ```jpeg()``` function. This is useful for standardizing output since you can set the dimensions of the figure. You can also adjust the resolution which may be necessary for journal submissions.  Note that when you use ```jpeg()``` you must also close the device using ```dev.off()``` e.g.,
 ```
 jpeg(filename, width, height, ...)
 

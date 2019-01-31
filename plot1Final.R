@@ -21,6 +21,13 @@ temp <- hdat[,c('BBH_SST_Mean', 'BBH_SST_May_Nov',
 tempMean <- apply(temp, 2, mean)
 tempSd <- apply(temp, 2, sd)
 
+### ------------------------------------ ###
+### We want to make a plot. However, in this case we are not going to feed
+### R any data so the program needs to know what the x and y limits should
+### be. x limits are easy -- we will have 4 x locations and we will plot them
+### at c(1, 2, 3, 4). y limits will need to be calculated based on what we
+### know about about the data we are going to plot.
+### ------------------------------------ ###
 
 # Generate range for y data. range() takes whatever inputs you give it and
 # calculates the min and max values. In this case our maximum extreme will
