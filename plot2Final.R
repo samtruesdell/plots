@@ -55,7 +55,7 @@ rect(xleft = 1999,
 box()
 
 # Now use lines to actually plot the Year vs SSB time series
-lines(SSB ~ Year, 
+lines(SSB ~ Year,   # Y ~ X
       data = hdat,
       type = 'o',   # indicates we want to plot both points and lines together
       pch = 16)     # we want closed circles for the points
