@@ -17,8 +17,8 @@ xl <- range(hdat$Year)
 # Set the plotting margins
 par(mar = c(5,6,2,4))
 
-# Plot the SSB time series
-plot(NA,             # Y ~ X (same as plot(X,y) )
+# Set up the empty plot
+plot(NA,             # Nothing to plot
      xlim = xl,      # x limits established earlier
      ylim = yl,      # y limits established earlier
      las = 1,        # ensure all labels are horizontal
